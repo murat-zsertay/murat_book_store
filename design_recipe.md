@@ -105,7 +105,7 @@ Using comments, define the method signatures (arguments and return value) and wh
 
 ```ruby
 # EXAMPLE
-# Table name: murat_book_store
+# Table name: book_store
 
 # Repository class
 # (in lib/book_repository.rb)
@@ -116,7 +116,7 @@ class BookRepository
   # No arguments
   def all
     # Executes the SQL query:
-    # SELECT id, title, author_name FROM murat_book_store;
+    # SELECT id, title, author_name FROM book_store;
 
     # Returns an array of Book objects.
   end
@@ -172,7 +172,7 @@ This is so you get a fresh table contents every time you run the test suite.
 
 def reset_book_store_table
   seed_sql = File.read('spec/seeds_book_store.sql')
-  connection = PG.connect({ host: '127.0.0.1', dbname: 'murat_book_store' })
+  connection = PG.connect({ host: '127.0.0.1', dbname: 'book_store' })
   connection.exec(seed_sql)
 end
 

@@ -17,7 +17,7 @@ require_relative '../lib/database_connection'
 
 # Make sure this connects to your test database
 # (its name should end with '_test')
-DatabaseConnection.connect('murat_book_store')
+DatabaseConnection.connect('book_store')
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

@@ -3,7 +3,7 @@ require 'rspec'
 
 def reset_book_store_table
     seed_sql = File.read('spec/seeds_book_store.sql')
-    connection = PG.connect({ host: '127.0.0.1', dbname: 'murat_book_store' })
+    connection = PG.connect({ host: '127.0.0.1', dbname: 'book_store' })
     connection.exec(seed_sql)
   
 end
