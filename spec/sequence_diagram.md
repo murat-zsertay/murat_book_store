@@ -20,8 +20,8 @@ participant t as terminal
     db_conn->>db_conn: Opens database connection using PG and stores the connection 
     br->>db_conn: Sends SQL query by calling method `exec_params` on DatabaseConnection
     db_conn->>db: Sends query to database via the open database connection
-    db->>db_conn: Returns an array of hashes, one for each row of the books table
-    db_conn->>br: Returns an array of hashes, one for each row of the books table
+    db->>db_conn: Returns an enumerable, containing a set of hashes for each record in the books table
+    db_conn->>br: Returns an enumerable, containing a set of hashes for each record in the books table
     loop 
         br->>br: Loops through array and creates an Book object for every row
     end
