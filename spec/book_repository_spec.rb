@@ -18,7 +18,6 @@ end
   repo = BookRepository.new
   result = repo.all.length
   expect(result).to eq 5
-  
   end
   
   end
